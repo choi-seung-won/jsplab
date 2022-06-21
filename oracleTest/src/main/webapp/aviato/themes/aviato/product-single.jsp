@@ -456,16 +456,15 @@ FACEBOOK: https://www.facebook.com/themefisher
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis delectus quidem repudiandae veniam distinctio repellendus magni pariatur molestiae asperiores animi, eos quod iusto hic doloremque iste a, nisi iure at unde molestias enim fugit, nulla voluptatibus. Deserunt voluptate tempora aut illum harum, deleniti laborum animi neque, praesentium explicabo, debitis ipsa?</p>
 						</div>
 						<div id="reviews" class="tab-pane fade">
+							<c:forEach step="1" var="review" items="${reviewPage.member}">
 							<div class="post-comments">
 						    	<ul class="media-list comments-list m-bot-50 clearlist">
+								  <div class="media-body">
 								    <!-- Comment Item start-->
 								    <li class="media">
-
 								        <a class="pull-left" href="#!">
 								            <img class="media-object comment-avatar" src="<%=request.getContextPath() %>/resources/images/blog/avater-1.jpg" alt="" width="50" height="50" />
 								        </a>
-								        <div class="media-body">
-										<c:forEach var="review" items="${reviewPage.member}">
 								            <div class="comment-info">
 								                <h4 class="comment-author">
 								                    <a href="#!">${review.mId} </a>
@@ -476,7 +475,6 @@ FACEBOOK: https://www.facebook.com/themefisher
 								            <p>
 								               ${review.reviews}
 								            </p>
-								            
 								        </div>
 
 								    </li>
@@ -500,7 +498,7 @@ FACEBOOK: https://www.facebook.com/themefisher
 								            </div>
 
 								            <p>
-								                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at magna ut ante eleifend eleifend. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni natus, nostrum iste non delectus atque ab a accusantium optio, dolor!
+								                ${review.reviews}
 								            </p>
 
 								        </div>
@@ -519,23 +517,21 @@ FACEBOOK: https://www.facebook.com/themefisher
 
 								            <div class="comment-info">
 								                <div class="comment-author">
-								                    <a href="#!">Jonathon Andrew</a>
+								                    <a href="#!">${review.mId}</a>
 								                </div>
 								                <time datetime="2013-04-06T13:53">July 02, 2015, at 11:34</time>
 								                <a class="comment-button" href="#!"><i class="tf-ion-chatbubbles"></i>Reply</a>
 								            </div>
-
 								            <p>
-								                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at magna ut ante eleifend eleifend.
+								                ${review.reviews}
 								            </p>
 
 								        </div>
-
 								    </li>
 							</ul>
 							</div>
+								  </c:forEach>
 						</div>
-						</c:forEach>
 					</div>
 				</div>
 			</div>
