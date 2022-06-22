@@ -456,7 +456,7 @@ FACEBOOK: https://www.facebook.com/themefisher
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis delectus quidem repudiandae veniam distinctio repellendus magni pariatur molestiae asperiores animi, eos quod iusto hic doloremque iste a, nisi iure at unde molestias enim fugit, nulla voluptatibus. Deserunt voluptate tempora aut illum harum, deleniti laborum animi neque, praesentium explicabo, debitis ipsa?</p>
 						</div>
 						<div id="reviews" class="tab-pane fade">
-							<c:forEach step="1" var="review" items="${reviewPage.member}">
+							<c:forEach var="review" items="${reviewPage.member}">
 							<div class="post-comments">
 						    	<ul class="media-list comments-list m-bot-50 clearlist">
 								  <div class="media-body">
@@ -476,9 +476,8 @@ FACEBOOK: https://www.facebook.com/themefisher
 								               ${review.reviews}
 								            </p>
 								        </div>
-
 								    </li>
-								    <!-- End Comment Item -->
+								    <%-- <!-- End Comment Item -->
 
 								    <!-- Comment Item start-->
 								    <li class="media">
@@ -505,7 +504,6 @@ FACEBOOK: https://www.facebook.com/themefisher
 
 								    </li>
 								    <!-- End Comment Item -->
-
 								    <!-- Comment Item start-->
 								    <li class="media">
 
@@ -527,10 +525,10 @@ FACEBOOK: https://www.facebook.com/themefisher
 								            </p>
 
 								        </div>
-								    </li>
+								    </li> --%>
 							</ul>
 							</div>
-								  </c:forEach>
+						  </c:forEach>
 						</div>
 					</div>
 				</div>
